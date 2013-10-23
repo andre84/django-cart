@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Cart(models.Model):
     creation_date = models.DateTimeField(verbose_name=_('creation date'))
     checked_out = models.BooleanField(default=False, verbose_name=_('checked out'))
-    user = model.ForeignKey(User)
+    user = models.ForeignKey(User)
 
     class Meta:
         verbose_name = _('cart')
